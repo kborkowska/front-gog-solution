@@ -1,0 +1,29 @@
+.top-bar {
+  top: 0;
+  position: sticky;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray);
+  z-index: var(--top-bar-z-index);
+}
+
+.content {
+  width: var(--app-width);
+  height: inherit;
+}
+
+.top-bar-content {
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 calc(var(--side-margin) - 1px);
+}
+
+.top-bar-icon {
+  height: 35px;
+  width: 43px;
+  padding-left: 2px;
+}

@@ -1,0 +1,38 @@
+.main-content-header {
+  margin: 40px 0 20px;
+  font-size: 14px;
+  text-align: start;
+}
+
+.main-content {
+  margin: 0 var(--side-margin);
+}
+
+.main-content-container {
+  width: var(--app-width, 1280px);
+  display: inline-flex;
+  align-content: center;
+}
+
+.main-game-img-container {
+  position: relative;
+  font-size: 0;
+}
+
+.main-game-img {
+  z-index: 2;
+  position: relative;
+}
+
+.hidden-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  border-color: black;
+  height: 40px;
+  width: 389px;
+  font-size: 12px;
+}

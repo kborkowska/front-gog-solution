@@ -1,0 +1,12 @@
+.secondary-content {
+  margin: 20px var(--side-margin);
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+}
+
+.secondary-content-container {
+  width: var(--app-width, 1280px);
+  display: inline-flex;
+  align-content: center;
+}

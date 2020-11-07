@@ -1,0 +1,73 @@
+.secondary-game-spot-container {
+  width: 196px;
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary-game-spot-card {
+  padding: 7px 8px;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: space-between;
+  flex-grow: 2;
+}
+
+.secondary-game-spot-name {
+  font-size: 12px;
+  margin: 4px 1px;
+  text-align: start;
+}
+
+.secondary-game-spot-tags {
+  margin-top: 2px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.secondary-game-spot-tag {
+  margin: 0 3px;
+}
+
+.discount-tag {
+  font-size: 11px;
+  background-color: var(--discount-green);
+  border-radius: 2px;
+  border-width: 0;
+  color: var(--discount-beige);
+  height: 24px;
+  width: 44px;
+  display: grid;
+  align-content: center;
+  font-weight: bolder;
+}
+
+.available-button {
+  background-color: black;
+  color: var(--price-gray);
+  height: 22px;
+  width: 52px;
+  border-width: 0;
+  font-size: 11px;
+}
+
+.in-cart-button {
+  background-color: black;
+  color: var(--price-gray-opaque);
+  height: 22px;
+  width: 66px;
+  border-width: 0;
+  font-size: 11px;
+}
+
+.owner-button {
+  background-color: black;
+  color: var(--price-gray-opaque);
+  opacity: 0.5;
+  height: 22px;
+  width: 61px;
+  border-width: 0;
+  font-size: 11px;
+}
