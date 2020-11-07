@@ -1,23 +1,45 @@
 import React, { FunctionComponent } from "react";
+import { useDispatch } from "react-redux";
 
-import { OwnershipState } from "../../../consts";
+import { ActionTypes, OwnershipState } from "../../../consts";
 import { GenericButton } from "../../generic-button/generic-button";
 import { SecondaryGameSpotProps } from "../../../interfaces";
 
 import "./secondary-game-spot.css";
 
-export const SecondaryGameSpot: FunctionComponent<SecondaryGameSpotProps> = ({
+interface SecondaryGameSpotOwnProps extends SecondaryGameSpotProps {
+  id: string;
+}
+
+export const SecondaryGameSpot: FunctionComponent<SecondaryGameSpotOwnProps> = ({
   imageSource,
   name,
   discount,
   price,
   state,
+  id,
 }) => {
-  const getGameSpotButton = (state: OwnershipState, price?: number) => {
+  const dispatch = useDispatch();
+
+  const getGameSpotButton = (
+    state: OwnershipState,
+    id: string,
+    price?: number
+  ) => {
     switch (state) {
       case OwnershipState.Available:
+        const onClick = () => {
+          dispatch({
+            type: ActionTypes.ChangeGameOwnershipState,
+            payload: { key: id, state: OwnershipState.InCart },
+          });
+        };
+
         return (
-          <GenericButton className="available-button secondary-game-spot-tag">
+          <GenericButton
+            className="available-button secondary-game-spot-tag"
+            onClick={onClick}
+          >
             {`$ ${price}`}
           </GenericButton>
         );
@@ -40,14 +62,20 @@ export const SecondaryGameSpot: FunctionComponent<SecondaryGameSpotProps> = ({
     <div className="secondary-game-spot-container">
       <img src={imageSource} alt={name} />
       <div className="secondary-game-spot-card">
-        <h4 className="secondary-game-spot-name">{name.toUpperCase()}</h4>
+        <h4
+          className={`secondary-game-spot-name ${
+            state === OwnershipState.Owns ? "secondary-game-spot-name-owns" : ""
+          }`}
+        >
+          {name.toUpperCase()}
+        </h4>
         <div className="secondary-game-spot-tags">
           {discount && (
             <div className="discount-tag secondary-game-spot-tag">
               {discount}
             </div>
           )}
-          {getGameSpotButton(state, price)}
+          {getGameSpotButton(state, id, price)}
         </div>
       </div>
     </div>

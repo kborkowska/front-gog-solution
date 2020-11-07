@@ -1,7 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Popover from "@material-ui/core/Popover";
-import Typography from "@material-ui/core/Typography";
+import { List } from "immutable";
+
+import { CartDropdown } from "./cart-dropdown/cart-dropdown";
+import { inCartSelector } from "../../store/selectors";
+import { StateEntities } from "../../consts";
 
 import CartIcon from "../../icons/cart-icon.png";
 
@@ -21,6 +26,9 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export const Cart = () => {
+  const inCartGames: List<Map<string, any>> = useSelector(
+    inCartSelector(StateEntities.Games)
+  );
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
     null
@@ -45,7 +53,8 @@ export const Cart = () => {
           type="button"
           onClick={handleClick}
         >
-          <img src={CartIcon} alt="Cart" />2
+          <img src={CartIcon} alt="Cart" />
+          {inCartGames.size}
         </button>
       </div>
       <Popover
@@ -63,9 +72,7 @@ export const Cart = () => {
         }}
         classes={{ paper: classes.popoverPaper }}
       >
-        <Typography className={classes.typography}>
-          The content of the Popover.
-        </Typography>
+        <CartDropdown />
       </Popover>
     </>
   );

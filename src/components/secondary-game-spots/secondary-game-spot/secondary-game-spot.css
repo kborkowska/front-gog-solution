@@ -18,6 +18,11 @@
   font-size: 12px;
   margin: 4px 1px;
   text-align: start;
+  color: var(--game-name);
+}
+
+.secondary-game-spot-name-owns {
+  opacity: 0.5;
 }
 
 .secondary-game-spot-tags {

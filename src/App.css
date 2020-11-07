@@ -13,6 +13,10 @@
   --price-gray: #404040;
   --price-gray-opaque: #404040bd;
   --cart-beige: #f7f7f7;
+  --cart-separator: #e6e6e6;
+
+  --cart-header-text: #1a1a1a;
+  --game-name: #212121;
 
   --top-bar-z-index: 10;
 

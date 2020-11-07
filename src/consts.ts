@@ -15,4 +15,5 @@ export enum StateEntities {
 
 export enum ActionTypes {
   ChangeGameOwnershipState,
+  ClearCart,
 }

@@ -1,5 +1,5 @@
 import { fromJS } from "immutable";
-import { uuid } from "uuidv4";
+import { v4 } from "uuid";
 
 import Oddworld from "../games/oddworld.png";
 import Chaos from "../games/chaos.png";
@@ -13,7 +13,7 @@ import { StoreState } from "../interfaces";
 const initialState: StoreState = fromJS({
   games: [
     {
-      id: uuid(),
+      key: v4(),
       imageSource: Oddworld,
       name: "oddworld: stranger's wrath",
       discount: "-50%",
@@ -21,21 +21,21 @@ const initialState: StoreState = fromJS({
       state: OwnershipState.Available,
     },
     {
-      id: uuid(),
+      key: v4(),
       imageSource: Chaos,
       name: "chaos on deponia",
       price: 9.99,
       state: OwnershipState.Owns,
     },
     {
-      id: uuid(),
+      key: v4(),
       imageSource: Settlers,
       name: "the settlers 2: gold edition",
       price: 5.99,
       state: OwnershipState.InCart,
     },
     {
-      id: uuid(),
+      key: v4(),
       imageSource: Neverwinter,
       name: "neverwinter nights",
       discount: "-50%",
@@ -43,7 +43,7 @@ const initialState: StoreState = fromJS({
       state: OwnershipState.Available,
     },
     {
-      id: uuid(),
+      key: v4(),
       imageSource: Assasin,
       name: "assassin's creed: director's cut",
       price: 9.99,
