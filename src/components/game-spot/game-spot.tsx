@@ -3,9 +3,9 @@ import React, { FunctionComponent } from "react";
 import { MainContentHeader } from "./main-content-header/main-content-header";
 import { MainImg } from "./main-img/main-img";
 
-import "./main-game.css";
+import "./game-spot.css";
 
-export const MainGame: FunctionComponent = () => {
+export const GameSpot: FunctionComponent = () => {
   return (
     <div className="main-content-container">
       <div className="main-content">

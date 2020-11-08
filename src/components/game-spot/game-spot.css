@@ -1,7 +1,9 @@
 .main-content-header {
   margin: 40px 0 20px;
-  font-size: 14px;
+  font-size: 15px;
+  color: rgb(38, 38, 38);
   text-align: start;
+  font-weight: bold;
 }
 
 .main-content {
@@ -14,12 +16,12 @@
   align-content: center;
 }
 
-.main-game-img-container {
+.game-spot-img-container {
   position: relative;
   font-size: 0;
 }
 
-.main-game-img {
+.game-spot-img {
   z-index: 2;
   position: relative;
 }
@@ -29,10 +31,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: black;
   color: white;
-  border-color: black;
+  border: 0;
   height: 40px;
   width: 389px;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  background-image: linear-gradient(
+    0deg,
+    rgb(0, 144, 94) 0%,
+    rgb(0, 199, 140) 100%
+  );
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(0, 117, 77, 0.8);
 }

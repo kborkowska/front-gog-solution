@@ -15,31 +15,36 @@
 }
 
 .secondary-game-spot-name {
-  font-size: 12px;
+  font-size: 14px;
   margin: 4px 1px;
   text-align: start;
+  font-weight: 600;
   color: var(--game-name);
 }
 
 .secondary-game-spot-name-owns {
-  opacity: 0.5;
+  color: rgba(33, 33, 33, 0.502);
 }
 
 .secondary-game-spot-tags {
-  margin-top: 2px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .secondary-game-spot-tag {
   margin: 0 3px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: var(--gray);
+  color: var(--price-gray-opaque);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+  height: 22px;
 }
 
 .discount-tag {
-  font-size: 11px;
   background-color: var(--discount-green);
-  border-radius: 2px;
   border-width: 0;
   color: var(--discount-beige);
   height: 24px;
@@ -47,32 +52,18 @@
   display: grid;
   align-content: center;
   font-weight: bolder;
+  border-radius: 3px;
 }
 
 .available-button {
-  background-color: black;
-  color: var(--price-gray);
-  height: 22px;
   width: 52px;
-  border-width: 0;
-  font-size: 11px;
 }
 
 .in-cart-button {
-  background-color: black;
-  color: var(--price-gray-opaque);
-  height: 22px;
-  width: 66px;
-  border-width: 0;
-  font-size: 11px;
+  width: 65px;
 }
 
 .owner-button {
-  background-color: black;
-  color: var(--price-gray-opaque);
   opacity: 0.5;
-  height: 22px;
-  width: 61px;
-  border-width: 0;
-  font-size: 11px;
+  width: 59px;
 }

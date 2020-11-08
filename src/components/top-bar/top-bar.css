@@ -7,6 +7,12 @@
   justify-content: center;
   background-color: var(--gray);
   z-index: var(--top-bar-z-index);
+  box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(222, 222, 222, 0.5)
+  );
 }
 
 .content {

@@ -15,13 +15,14 @@
   width: 56px;
   height: inherit;
   border: 0;
-  background-color: var(--gray);
+  background-color: rgba(0, 0, 0, 0);
   outline: none;
   transition-duration: 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
+  color: var(--price-gray);
 }
 
 .cart-button img {
@@ -39,8 +40,8 @@
 .cart-dropdown-header {
   height: 60px;
   color: var(--cart-header-text);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,17 +53,27 @@
   justify-content: space-between;
   padding: 0 4px;
   flex-grow: 2;
+  font-size: 15px;
+  color: rgb(26, 26, 26);
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 .cart-dropdown-header-button {
+  font-weight: 600;
   margin: 0 6px;
-  background-color: black;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   width: 129px;
   height: 40px;
-  padding-right: 2px;
   border: 0;
+  background-image: linear-gradient(
+    0deg,
+    rgb(122, 61, 198) 0%,
+    rgb(182, 90, 226) 100%
+  );
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(122, 61, 198, 0.8);
 }
 
 .cart-dropdown-header-button-disabled {
@@ -72,7 +83,7 @@
 .cart-dropdown-item {
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .cart-dropdown-item img {
@@ -84,8 +95,7 @@
 
 .cart-dropdown-item-name button {
   text-decoration: underline;
-  font-size: 11px;
-  font-weight: lighter;
+  font-size: 12px;
   border: 0;
   background-color: inherit;
   padding: 0;
@@ -95,7 +105,7 @@
 .cart-dropdown-item-name {
   color: var(--game-name);
   width: 190px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 5px;
 }
 
@@ -113,7 +123,9 @@
 
 .cart-dropdown-price {
   color: var(--price-gray-opaque);
-  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: right;
   padding: 10px;
 }
 

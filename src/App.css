@@ -6,17 +6,17 @@
 
   --gray: #dedede;
   --separator-gray: rgba(0, 0, 0, 0.07);
-  --gradient-gray: #808080;
+  --gradient: #bab6c0;
   --main-background-gray: #c2c2c2;
-  --discount-green: #00905e;
-  --discount-beige: #f2f2f2;
-  --price-gray: #404040;
-  --price-gray-opaque: #404040bd;
+  --discount-green: rgb(0, 144, 94);
+  --discount-beige: rgb(242, 242, 242);
+  --price-gray: rgb(64, 64, 64);
+  --price-gray-opaque: rgba(64, 64, 64, 0.749);
   --cart-beige: #f7f7f7;
   --cart-separator: #e6e6e6;
 
   --cart-header-text: #1a1a1a;
-  --game-name: #212121;
+  --game-name: rgb(33, 33, 33);
 
   --top-bar-z-index: 10;
 
@@ -25,12 +25,16 @@
 
 .App {
   text-align: center;
-  display: block;
+  position: relative;
+}
+
+.App button {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .background-gradient {
   background-image: linear-gradient(
-    var(--gradient-gray),
+    var(--gradient),
     var(--main-background-gray)
   );
   height: 423px;

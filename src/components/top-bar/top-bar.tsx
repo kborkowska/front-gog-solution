@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import GogLogo from "../../icons/gog-logo.png";
+import GogLogo from "../../icons/logo-classic.png";
 import { Cart } from "../cart/cart";
 
 import "./top-bar.css";

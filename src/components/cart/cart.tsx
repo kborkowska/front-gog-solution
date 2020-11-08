@@ -14,13 +14,10 @@ import "./cart.css";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    typography: {
-      padding: theme.spacing(2),
-    },
     popoverPaper: {
       borderRadius: 0,
-      boxShadow: "none",
       backgroundColor: "#F7F7F7",
+      boxShadow: "0px 15px 15px 0px rgba(0, 0, 0, 0.15)",
     },
   })
 );
