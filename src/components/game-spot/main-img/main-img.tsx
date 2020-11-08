@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 
 import { GenericButton } from "../../buttons/generic-button";
-import { Headers } from "../../../consts";
+import { Headers } from "../../../common/consts";
 
 import GameSpotImg from "../../../games/witcher.png";
 

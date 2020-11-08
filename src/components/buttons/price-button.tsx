@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 
 import { GenericButton, GenericButtonProps } from "./generic-button";
-import { ButtonSizes } from "../../consts";
+import { ButtonSizes } from "../../common/consts";
 
 import "./buttons.css";
 

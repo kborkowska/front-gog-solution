@@ -1,12 +1,16 @@
 import React, { FunctionComponent } from "react";
 import { useDispatch } from "react-redux";
 
-import { ActionTypes, ButtonSizes, OwnershipState } from "../../../consts";
+import {
+  ActionTypes,
+  ButtonSizes,
+  OwnershipState,
+} from "../../../common/consts";
 import { OwnerButton } from "../../buttons/owner-button";
 import { PriceButton } from "../../buttons/price-button";
 import { InCartButton } from "../../buttons/in-cart-button";
 import { DiscountTag } from "../../buttons/discount-tag";
-import { SmallGameSpotProps } from "../../../interfaces";
+import { SmallGameSpotProps } from "../../../common/interfaces";
 
 import "./small-game-spot.css";
 

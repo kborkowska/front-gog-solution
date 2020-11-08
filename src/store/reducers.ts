@@ -1,6 +1,6 @@
 import initialState from "./initialState";
-import { Action } from "../interfaces";
-import { ActionTypes, OwnershipState, StateEntities } from "../consts";
+import { Action } from "../common/interfaces";
+import { ActionTypes, OwnershipState, StateEntities } from "../common/consts";
 
 const reducer = (state = initialState, action: Action<any>) => {
   switch (action.type) {

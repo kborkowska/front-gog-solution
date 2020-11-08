@@ -3,21 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { List, Map } from "immutable";
 
 import { inCartSelector } from "../../../store/selectors";
-import { ActionTypes, StateEntities } from "../../../consts";
+import { ActionTypes, StateEntities } from "../../../common/consts";
 import { GenericButton } from "../../buttons/generic-button";
 import { CartDropdownItem } from "./cart-dropdown-item";
-
-const getCatSummary = (numberOfItems: number): string => {
-  return (numberOfItems
-    ? `${numberOfItems} item${numberOfItems > 1 ? "s" : ""} in cart`
-    : "the cart is empty"
-  ).toUpperCase();
-};
-
-const getTotalPrice = (prices: List<Map<string, any>>) =>
-  `$ ${prices.reduce((acc, curr) => {
-    return (acc += curr.get("price"));
-  }, 0)}`;
+import { getCartSummary, getTotalPrice } from "../../../common/utils";
 
 export const CartDropdown: FunctionComponent = () => {
   const inCartGames: List<Map<string, any>> = useSelector(
@@ -37,7 +26,7 @@ export const CartDropdown: FunctionComponent = () => {
     <div className="cart-dropdown">
       <div className="cart-dropdown-header">
         <div className="cart-dropdown-header-summary">
-          <span>{getCatSummary(inCartGames.size)}</span>
+          <span>{getCartSummary(inCartGames.size)}</span>
           <span>{getTotalPrice(inCartGames)}</span>
         </div>
         <GenericButton

@@ -15,10 +15,8 @@
 }
 
 .small-game-spot-name {
-  font-size: 14px;
   margin: 4px 1px;
   text-align: start;
-  font-weight: 600;
   color: var(--game-name);
 }
 

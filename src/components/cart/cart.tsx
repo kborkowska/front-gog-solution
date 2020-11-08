@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Popover from "@material-ui/core/Popover";
@@ -6,7 +6,8 @@ import { List } from "immutable";
 
 import { CartDropdown } from "./cart-dropdown/cart-dropdown";
 import { inCartSelector } from "../../store/selectors";
-import { StateEntities } from "../../consts";
+import { StateEntities } from "../../common/consts";
+import { MenuButton } from "../buttons/menu-button";
 
 import CartIcon from "../../icons/cart-icon.png";
 
@@ -27,9 +28,7 @@ export const Cart = () => {
     inCartSelector(StateEntities.Games)
   );
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
-    null
-  );
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -44,16 +43,10 @@ export const Cart = () => {
 
   return (
     <>
-      <div className="separator-horizontal">
-        <button
-          className={`cart-button ${open ? "cart-button-active" : ""}`}
-          type="button"
-          onClick={handleClick}
-        >
-          <img src={CartIcon} alt="Cart" />
-          {inCartGames.size}
-        </button>
-      </div>
+      <MenuButton active={open} type="button" onClick={handleClick}>
+        <img src={CartIcon} alt="Cart" />
+        {inCartGames.size}
+      </MenuButton>
       <Popover
         id={id}
         open={open}

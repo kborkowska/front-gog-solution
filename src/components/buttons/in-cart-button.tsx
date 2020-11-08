@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 
 import { GenericButton, GenericButtonProps } from "./generic-button";
-import { OwnershipState, ButtonSizes } from "../../consts";
+import { OwnershipState, ButtonSizes } from "../../common/consts";
 
 import "./buttons.css";
 

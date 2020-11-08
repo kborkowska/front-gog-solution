@@ -7,8 +7,8 @@ import Settlers from "../games/settlers.png";
 import Neverwinter from "../games/neverwinter.png";
 import Assasin from "../games/assasin.png";
 
-import { OwnershipState } from "../consts";
-import { StoreState } from "../interfaces";
+import { OwnershipState } from "../common/consts";
+import { StoreState } from "../common/interfaces";
 
 const initialState: StoreState = fromJS({
   games: [

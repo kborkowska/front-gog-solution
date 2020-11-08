@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { ButtonSizes } from "../../consts";
+import { ButtonSizes } from "../../common/consts";
 
 interface DiscountTagProps {
   enabled: boolean;

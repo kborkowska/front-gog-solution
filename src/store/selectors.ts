@@ -1,5 +1,5 @@
-import { StoreState } from "../interfaces";
-import { StateEntities, OwnershipState } from "../consts";
+import { StoreState } from "../common/interfaces";
+import { StateEntities, OwnershipState } from "../common/consts";
 
 export const entitySelector = (entity: StateEntities) => (state: StoreState) =>
   state.get(entity);

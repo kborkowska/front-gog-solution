@@ -1,9 +1,9 @@
 import React, { FunctionComponent, useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
-import { ActionTypes, OwnershipState } from "../../../consts";
+import { ActionTypes, OwnershipState } from "../../../common/consts";
 
-import { SmallGameSpotProps } from "../../../interfaces";
-import { cutText } from "../../../utils";
+import { SmallGameSpotProps } from "../../../common/interfaces";
+import { cutText } from "../../../common/utils";
 import { GenericButton } from "../../buttons/generic-button";
 
 interface CartDropdownItemProps extends SmallGameSpotProps {
