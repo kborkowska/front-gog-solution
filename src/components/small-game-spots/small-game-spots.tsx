@@ -12,8 +12,8 @@ export const SmallGameSpots: FunctionComponent = () => {
   const games = useSelector(entitySelector(StateEntities.Games)).toJS();
 
   return (
-    <div className="secondary-content-container">
-      <div className="secondary-content">
+    <div className="small-game-spots-content-container">
+      <div className="small-game-spots-content">
         {games.map((gameProps: SmallGameSpotProps) => (
           <SmallGameSpot {...gameProps} id={gameProps.key} />
         ))}

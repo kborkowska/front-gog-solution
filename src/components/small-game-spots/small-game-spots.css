@@ -1,11 +1,12 @@
-.secondary-content {
+.small-game-spots-content {
   margin: 20px var(--side-margin);
   display: flex;
   width: inherit;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.secondary-content-container {
+.small-game-spots-content-container {
   width: var(--app-width, 1280px);
   display: inline-flex;
   align-content: center;
