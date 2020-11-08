@@ -1,11 +1,11 @@
-.secondary-game-spot-container {
+.small-game-spot-container {
   width: 196px;
   background-color: var(--gray);
   display: flex;
   flex-direction: column;
 }
 
-.secondary-game-spot-card {
+.small-game-spot-card {
   padding: 7px 8px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   flex-grow: 2;
 }
 
-.secondary-game-spot-name {
+.small-game-spot-name {
   font-size: 14px;
   margin: 4px 1px;
   text-align: start;
@@ -22,11 +22,11 @@
   color: var(--game-name);
 }
 
-.secondary-game-spot-name-owns {
+.small-game-spot-name-owns {
   color: rgba(33, 33, 33, 0.502);
 }
 
-.secondary-game-spot-tags {
+.small-game-spot-tags {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -34,7 +34,7 @@
   font-weight: 600;
 }
 
-.secondary-game-spot-tag {
+.small-game-spot-tag {
   margin: 0 3px;
   border: 1px solid rgba(0, 0, 0, 0.25);
   background-color: var(--gray);

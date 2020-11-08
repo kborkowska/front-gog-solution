@@ -2,7 +2,7 @@ import { Map } from "immutable";
 
 import { OwnershipState, StateEntities, ActionTypes } from "./consts";
 
-export interface SecondaryGameSpotProps {
+export interface SmallGameSpotProps {
   key: string;
   imageSource: string;
   name: string;
@@ -18,10 +18,7 @@ export interface Action<T> {
   payload: T;
 }
 
-export type ChangeOwnershipPayload = Pick<
-  SecondaryGameSpotProps,
-  "state" | "key"
->;
+export type ChangeOwnershipPayload = Pick<SmallGameSpotProps, "state" | "key">;
 
 export type ChangeOwnershipAction = Action<ChangeOwnershipPayload>;
 

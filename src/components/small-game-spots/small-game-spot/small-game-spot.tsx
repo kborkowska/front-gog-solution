@@ -3,15 +3,15 @@ import { useDispatch } from "react-redux";
 
 import { ActionTypes, OwnershipState } from "../../../consts";
 import { GenericButton } from "../../generic-button/generic-button";
-import { SecondaryGameSpotProps } from "../../../interfaces";
+import { SmallGameSpotProps } from "../../../interfaces";
 
-import "./secondary-game-spot.css";
+import "./small-game-spot.css";
 
-interface SecondaryGameSpotOwnProps extends SecondaryGameSpotProps {
+interface SmallGameSpotOwnProps extends SmallGameSpotProps {
   id: string;
 }
 
-export const SecondaryGameSpot: FunctionComponent<SecondaryGameSpotOwnProps> = ({
+export const SmallGameSpot: FunctionComponent<SmallGameSpotOwnProps> = ({
   imageSource,
   name,
   discount,
@@ -37,7 +37,7 @@ export const SecondaryGameSpot: FunctionComponent<SecondaryGameSpotOwnProps> = (
 
         return (
           <GenericButton
-            className="available-button secondary-game-spot-tag"
+            className="available-button small-game-spot-tag"
             onClick={onClick}
           >
             {`$ ${price}`}
@@ -45,13 +45,13 @@ export const SecondaryGameSpot: FunctionComponent<SecondaryGameSpotOwnProps> = (
         );
       case OwnershipState.InCart:
         return (
-          <GenericButton className="in-cart-button secondary-game-spot-tag">
+          <GenericButton className="in-cart-button small-game-spot-tag">
             {OwnershipState.InCart.toUpperCase()}
           </GenericButton>
         );
       case OwnershipState.Owns:
         return (
-          <GenericButton className="owner-button secondary-game-spot-tag">
+          <GenericButton className="owner-button small-game-spot-tag">
             {OwnershipState.Owns.toUpperCase()}
           </GenericButton>
         );
@@ -59,21 +59,19 @@ export const SecondaryGameSpot: FunctionComponent<SecondaryGameSpotOwnProps> = (
   };
 
   return (
-    <div className="secondary-game-spot-container">
+    <div className="small-game-spot-container">
       <img src={imageSource} alt={name} />
-      <div className="secondary-game-spot-card">
+      <div className="small-game-spot-card">
         <h4
-          className={`secondary-game-spot-name ${
-            state === OwnershipState.Owns ? "secondary-game-spot-name-owns" : ""
+          className={`small-game-spot-name ${
+            state === OwnershipState.Owns ? "small-game-spot-name-owns" : ""
           }`}
         >
           {name.toUpperCase()}
         </h4>
-        <div className="secondary-game-spot-tags">
+        <div className="small-game-spot-tags">
           {discount && (
-            <div className="discount-tag secondary-game-spot-tag">
-              {discount}
-            </div>
+            <div className="discount-tag small-game-spot-tag">{discount}</div>
           )}
           {getGameSpotButton(state, id, price)}
         </div>

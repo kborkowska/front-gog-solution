@@ -2,11 +2,11 @@ import React, { FunctionComponent, useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
 import { ActionTypes, OwnershipState } from "../../../consts";
 
-import { SecondaryGameSpotProps } from "../../../interfaces";
+import { SmallGameSpotProps } from "../../../interfaces";
 import { cutText } from "../../../utils";
 import { GenericButton } from "../../generic-button/generic-button";
 
-interface CartDropdownItemProps extends SecondaryGameSpotProps {
+interface CartDropdownItemProps extends SmallGameSpotProps {
   id: string;
 }
 
