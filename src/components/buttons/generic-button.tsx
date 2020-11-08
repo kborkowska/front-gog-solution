@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode, MouseEvent } from "react";
 
-interface GenericButtonProps {
+export interface GenericButtonProps {
   children?: ReactNode | ReactNode[];
   className?: string;
   style?: {};

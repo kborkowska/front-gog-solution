@@ -17,3 +17,9 @@ export enum ActionTypes {
   ChangeGameOwnershipState,
   ClearCart,
 }
+
+export enum ButtonSizes {
+  Small = "small",
+  Medium = "medium",
+  Big = "big",
+}

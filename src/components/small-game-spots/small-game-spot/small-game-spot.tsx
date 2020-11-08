@@ -1,8 +1,11 @@
 import React, { FunctionComponent } from "react";
 import { useDispatch } from "react-redux";
 
-import { ActionTypes, OwnershipState } from "../../../consts";
-import { GenericButton } from "../../generic-button/generic-button";
+import { ActionTypes, ButtonSizes, OwnershipState } from "../../../consts";
+import { OwnerButton } from "../../buttons/owner-button";
+import { PriceButton } from "../../buttons/price-button";
+import { InCartButton } from "../../buttons/in-cart-button";
+import { DiscountTag } from "../../buttons/discount-tag";
 import { SmallGameSpotProps } from "../../../interfaces";
 
 import "./small-game-spot.css";
@@ -24,7 +27,7 @@ export const SmallGameSpot: FunctionComponent<SmallGameSpotOwnProps> = ({
   const getGameSpotButton = (
     state: OwnershipState,
     id: string,
-    price?: number
+    price: number = 0
   ) => {
     switch (state) {
       case OwnershipState.Available:
@@ -36,25 +39,16 @@ export const SmallGameSpot: FunctionComponent<SmallGameSpotOwnProps> = ({
         };
 
         return (
-          <GenericButton
-            className="available-button small-game-spot-tag"
+          <PriceButton
+            size={ButtonSizes.Small}
+            price={price}
             onClick={onClick}
-          >
-            {`$ ${price}`}
-          </GenericButton>
+          />
         );
       case OwnershipState.InCart:
-        return (
-          <GenericButton className="in-cart-button small-game-spot-tag">
-            {OwnershipState.InCart.toUpperCase()}
-          </GenericButton>
-        );
+        return <InCartButton size={ButtonSizes.Small} />;
       case OwnershipState.Owns:
-        return (
-          <GenericButton className="owner-button small-game-spot-tag">
-            {OwnershipState.Owns.toUpperCase()}
-          </GenericButton>
-        );
+        return <OwnerButton size={ButtonSizes.Small} />;
     }
   };
 
@@ -70,9 +64,11 @@ export const SmallGameSpot: FunctionComponent<SmallGameSpotOwnProps> = ({
           {name.toUpperCase()}
         </h4>
         <div className="small-game-spot-tags">
-          {discount && (
-            <div className="discount-tag small-game-spot-tag">{discount}</div>
-          )}
+          <DiscountTag
+            size={ButtonSizes.Small}
+            enabled={!!discount}
+            discount={discount}
+          />
           {getGameSpotButton(state, id, price)}
         </div>
       </div>

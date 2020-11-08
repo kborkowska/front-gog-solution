@@ -4,7 +4,7 @@ import { ActionTypes, OwnershipState } from "../../../consts";
 
 import { SmallGameSpotProps } from "../../../interfaces";
 import { cutText } from "../../../utils";
-import { GenericButton } from "../../generic-button/generic-button";
+import { GenericButton } from "../../buttons/generic-button";
 
 interface CartDropdownItemProps extends SmallGameSpotProps {
   id: string;
@@ -38,7 +38,7 @@ export const CartDropdownItem: FunctionComponent<CartDropdownItemProps> = (
       >
         <img src={props.imageSource} alt="NA" />
         <div className="cart-dropdown-item-summary">
-          <div className="cart-dropdown-item-name">
+          <div className="cart-dropdown-item-name cart-dropdown-item-cut">
             {cutText(props.name).toUpperCase()}
             {hover && (
               <>

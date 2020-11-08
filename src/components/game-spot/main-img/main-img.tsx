@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import { GenericButton } from "../../generic-button/generic-button";
+import { GenericButton } from "../../buttons/generic-button";
 import { Headers } from "../../../consts";
 
 import GameSpotImg from "../../../games/witcher.png";

@@ -4,7 +4,7 @@ import { List, Map } from "immutable";
 
 import { inCartSelector } from "../../../store/selectors";
 import { ActionTypes, StateEntities } from "../../../consts";
-import { GenericButton } from "../../generic-button/generic-button";
+import { GenericButton } from "../../buttons/generic-button";
 import { CartDropdownItem } from "./cart-dropdown-item";
 
 const getCatSummary = (numberOfItems: number): string => {
