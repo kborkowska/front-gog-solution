@@ -16,9 +16,5 @@ export const MenuButton: FunctionComponent<MenuButtonProps> = ({
     props.className
   }`;
 
-  return (
-    <div className="separator-horizontal separator-horizontal-menu">
-      <GenericButton {...props} className={className} />
-    </div>
-  );
+  return <GenericButton {...props} className={className} />;
 };

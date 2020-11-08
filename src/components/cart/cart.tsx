@@ -30,7 +30,7 @@ export const Cart = () => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: React.MouseEvent<any>) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -43,7 +43,7 @@ export const Cart = () => {
 
   return (
     <>
-      <MenuButton active={open} type="button" onClick={handleClick}>
+      <MenuButton active={open} onClick={handleClick}>
         <img src={CartIcon} alt="Cart" />
         {inCartGames.size}
       </MenuButton>
